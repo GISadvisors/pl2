@@ -20,7 +20,7 @@
     <script src="https://js.arcgis.com/4.22/"></script>
     
     <script>
-      require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/layers/GraphicsLayer" ], function (esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+      require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/layers/GraphicsLayer" ], function (esriConfig, Map, MapView, Graphic, GraphicsLayer) {
 
         esriConfig.apiKey = "AAPK87ea335ade054bd4b729b2d558ba47d787qJwaLNKCsRjUCG9uArcRvituyZ_FLrNAeUx9DaUQCmu4vPnXYOc0NR8eXiUOqk";
 
@@ -34,6 +34,9 @@
           zoom: 18, // Zoom level
           container: "viewDiv" // Div element
         }); 
+        
+         const graphicsLayer = new GraphicsLayer();
+          map.add(graphicsLayer);
         
          const polyline = {
           type: "polyline", // autocasts as new Polyline()
