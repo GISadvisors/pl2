@@ -20,7 +20,7 @@
     <script src="https://js.arcgis.com/4.22/"></script>
     
     <script>
-      require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic"], function (esriConfig,Map, MapView, Graphic) {
+      require(["esri/config","esri/Map", "esri/views/MapView", "esri/Graphic", "esri/layers/GraphicsLayer" ], function (esriConfig,Map, MapView, Graphic, GraphicsLayer) {
 
         esriConfig.apiKey = "AAPK87ea335ade054bd4b729b2d558ba47d787qJwaLNKCsRjUCG9uArcRvituyZ_FLrNAeUx9DaUQCmu4vPnXYOc0NR8eXiUOqk";
 
@@ -59,7 +59,7 @@
           Length: "3,456 km"
         };
         
-          const polylineGraphic = new Graphic({
+        const polylineGraphic = new Graphic({
           geometry: polyline,
           symbol: lineSymbol,
           attributes: lineAtt,
